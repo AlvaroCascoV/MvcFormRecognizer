@@ -1,0 +1,20 @@
+﻿@model FacturaReconocida
+
+<h1>Analisis de documentos Azure IA</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <label>Seleccione una factura (pdf)</label>
+    <input type="file" name="file" class="form-control"/>
+    <button class="btn btn-warning">Analizar factura IA</button>
+</form>
+
+@if(Model != null)
+{
+    <ul class="list-group">
+        <li class="list-group-item">Proveedor: <b>@Model.Proveedor</b></li>
+        <li class="list-group-item">Fecha: <b>@Model.Fecha</b></li>
+        <li class="list-group-item">Numero Factura: <b>@Model.NumeroFactura</b></li>
+        <li class="list-group-item">Total: <b>@Model.Total</b></li>
+    </ul>
+}
+
